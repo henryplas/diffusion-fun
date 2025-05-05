@@ -29,6 +29,10 @@ class DiffusionModel(nn.Module):
         inp     = torch.cat([x, t_embed], dim=1)    
         return self.net(inp)
 
+
+# 4) Training loop
+batch_size = 128
+
 model     = DiffusionModel().to(device)
 optimizer = optim.Adam(model.parameters(), lr=1e-3)
 mse       = nn.MSELoss()
@@ -39,8 +43,7 @@ comp  = torch.randint(0, 2, (batch_size,), device=device)
 means = torch.where(comp==0, -2.0, 2.0)
 x0    = (means + 0.5*torch.randn(batch_size, device=device)).unsqueeze(1)
 
-# 4) Training loop
-batch_size = 128
+
 for step in range(10_000):
 
     # pick random timestep t
