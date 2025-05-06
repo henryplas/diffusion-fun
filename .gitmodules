@@ -1,0 +1,3 @@
+[submodule "external/CleanDiffuser"]
+	path = external/CleanDiffuser
+	url = https://github.com/CleanDiffuserTeam/CleanDiffuser.git
