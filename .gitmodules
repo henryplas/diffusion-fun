@@ -1,3 +1,6 @@
 [submodule "external/CleanDiffuser"]
 	path = external/CleanDiffuser
 	url = https://github.com/CleanDiffuserTeam/CleanDiffuser.git
+[submodule "external/drone_rl"]
+	path = external/drone_rl
+	url = https://github.com/henryplas/drone_rl.git
